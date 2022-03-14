@@ -1,0 +1,15 @@
+.home{
+    flex: 4;
+}
+.homeWidgets{
+    display: flex;
+    margin: 2.0em;
+}
+@media(max-width: 40em){
+    .home{
+        flex: 2;
+    }
+    .homeWidgets{
+        display: block;
+    }  
+} 
