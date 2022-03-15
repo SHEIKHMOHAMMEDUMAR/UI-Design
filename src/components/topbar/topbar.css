@@ -19,13 +19,15 @@
     color: darkblue;
 }
 .toplefta{
+    display: flex;
+}
+.topleftb{
     display: none;
 }
 .topright{
     display: flex;
     align-items: center;
 }
-
 .topbarIconsContainer{
     position: relative;
     cursor: pointer;
@@ -53,7 +55,16 @@
     border-radius: 50%;
 }
 @media(max-width: 30em){
-    .topleftb{
+    .toplefta{
         display: none;
-    }   
+    }
+    .topleftb{
+        display: inline;
+    }
+    .lan{
+        display: none;
+    }
+    .set{
+        display: none;
+    }
 }

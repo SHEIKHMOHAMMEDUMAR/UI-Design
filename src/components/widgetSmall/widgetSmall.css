@@ -3,10 +3,9 @@
     -webkit-box-shadow: 0rem 0rem 1.5rem -1.0rem rgb(0,0,0,0.75);
     box-shadow: 0rem 0rem 1.5rem -1.0rem rgb(0,0,0,0.75);
     padding: 1.0rem;
-    margin-right: 2.0rem;
 }
 .widgetSTitle{
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 .widgetSImg{
@@ -50,14 +49,4 @@
 .widgetSIcon{
     margin-right: .5rem;
 }
-/*
-@media(max-width:998px){
-    html{
-        font-size: 55%;
-    }
-}
-@media(max-width:768px){
-    html{
-        font-size: 45%;
-    }
-} */
+
