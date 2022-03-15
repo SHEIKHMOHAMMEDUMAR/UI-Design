@@ -56,4 +56,13 @@
     .topleftb{
         display: none;
     }   
+    .toplefta{
+        display: inline;
+    }
+    .lan{
+        display: none;    
+    }
+    .set{
+        display: none;
+    }
 }
