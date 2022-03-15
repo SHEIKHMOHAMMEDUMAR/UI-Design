@@ -25,6 +25,7 @@
     display: none;
 }
 .topright{
+    align-self: right;
     display: flex;
     align-items: center;
 }
