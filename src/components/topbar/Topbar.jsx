@@ -10,19 +10,24 @@ export default function topbar() {
           <span className='logo'> Perfios Software Solution Ltd. Std.</span>  
         </div> 
         <div className='toplefta'>
-          <span className='logo'> PSSLS</span> 
+          <span className='logo'> PERFIOS </span> 
         </div>  
         <div className='topright'>
+          
+          <div className="topbarIconsContainer"> 
+          <div className="lan">
+            <Language />
+            <span className="topbarIconsBadges">2</span>
+            </div>
+          </div>
+          <div className="topbarIconsContainer"> 
+          <div className="set">
+            <Settings /> 
+            </div> 
+          </div>
           <div className="topbarIconsContainer"> 
             <Notifications />
             <span className="topbarIconsBadges">2</span>
-          </div>
-          <div className="topbarIconsContainer"> 
-            <Language />
-            <span className="topbarIconsBadges">2</span>
-          </div>
-          <div className="topbarIconsContainer"> 
-            <Settings />  
           </div>
           <div className="topbarIconsContainer"> 
             <img src= {faker.image.avatar()} alt="" className='topbaravatar'/>  
@@ -32,3 +37,4 @@ export default function topbar() {
     </div>
   )
 }
+
