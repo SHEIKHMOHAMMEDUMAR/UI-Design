@@ -7,9 +7,9 @@
 .chartTitle{
     margin-bottom: 1.0rem;
 }
-@media(max-width:40em){
+@media(max-width:30em){
     .chart{
-        max-width: 80%;
+        max-width: 70%;
         max-height: 40%;
     }
 }

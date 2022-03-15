@@ -49,4 +49,16 @@
 .widgetSIcon{
     margin-right: .5rem;
 }
+@media(max-width:30em){
+    .widgetS{
+        flex: 1;
+        max-width: 75%;
+    }
+    .widgetSImg{
+        max-width: 2.0rem;
+        max-height: 2.0rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
 

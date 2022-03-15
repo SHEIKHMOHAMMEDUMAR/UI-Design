@@ -11,5 +11,6 @@
     }
     .homeWidgets{
         display: block;
-    }  
+        margin: 1.0em;
+    }
 } 

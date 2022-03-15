@@ -44,6 +44,5 @@
 @media(max-width: 30em) {
     .featured{
         display: block;
-        margin-right: 1em;
     }
 }
