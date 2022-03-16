@@ -1,6 +1,7 @@
 import React from 'react'
 import "./topbar.css"
 import { Notifications, Language, Settings } from '@material-ui/icons'
+import { Menu } from '@material-ui/icons';
 const { faker } = require('@faker-js/faker');
 export default function topbar() {
   return (
@@ -10,6 +11,7 @@ export default function topbar() {
           <span className='logo'> Perfios Software Solution Ltd. Std.</span>  
         </div> 
         <div className='toplefta'>
+          <Menu className='menuIcon'/>
           <span className='logo'> PERFIOS </span> 
         </div>  
         <div className='topright'>
