@@ -53,6 +53,9 @@
     border-radius: 50%;
 }
 @media(max-width: 30em){
+    .topbar{
+        max-width: 100%;
+    }
     .topleftb{
         display: none;
     }   
