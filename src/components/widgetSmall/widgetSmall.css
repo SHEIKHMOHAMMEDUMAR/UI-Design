@@ -52,7 +52,7 @@
 @media(max-width:30em){
     .widgetS{
         flex: 1;
-        max-width: 75%;
+        max-width: 100%;
     }
     .widgetSImg{
         max-width: 2.0rem;

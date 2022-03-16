@@ -12,7 +12,7 @@ export default function WidgetLarge() {
           <th className="widgetLTh">Customer</th>
           <th className="widgetLTh">Date</th>
           <th className="widgetLTh">Amount</th>
-          <th className="widgetLTh">Status</th>
+          <th className="widgetLTh s">Status</th>
         </tr>
         <tr className="widgetLTr">
           <td className="widgetLUser">

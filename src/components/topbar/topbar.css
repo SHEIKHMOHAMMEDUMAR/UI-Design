@@ -63,12 +63,14 @@
         display: none;
     }
     .topleftb{
-        display: inline;
+        display: block;
     }
     .lan{
         display: none;
     }
     .set{
         display: none;
+    }.menuIcon{
+        cursor: pointer;
     }
 }

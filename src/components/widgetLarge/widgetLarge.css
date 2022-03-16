@@ -50,7 +50,7 @@
 @media(max-width:30em){
     .widgetL{
         flex: 1;
-        max-width: 75%;
+        max-width: 100%;
     }
     .widgetLImg{
         max-width: 2.0rem;
@@ -58,5 +58,8 @@
         border-radius: 50%;
         object-fit: cover;
         margin-right: .50rem;
+    }
+    .widgetLStatus, .widgetLTh.s{
+        display: none;
     }
 }

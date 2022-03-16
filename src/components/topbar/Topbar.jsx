@@ -11,7 +11,7 @@ export default function topbar() {
           <span className='logo'>Perfios Software Solution Ltd. Std.</span>
         </div>
         <div className='topleftb'>
-          <Menu className='menuIcon'/>
+          <Menu type="checkbox" className='menuIcon'/>
           <span className='logo'>PSSLS</span>  
         </div>   
         <div className='topright'>
