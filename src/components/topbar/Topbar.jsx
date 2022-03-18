@@ -11,8 +11,15 @@ export default function topbar() {
           <span className='logo'>Perfios Software Solution Ltd. Std.</span>
         </div>
         <div className='topleftb'>
-          <Menu type="checkbox" className='menuIcon'/>
-          <span className='logo'>PSSLS</span>  
+          <label for="toggle"><Menu/></label>
+          <span className='logo'>PSSLS</span>
+          <input type="checkbox" id="toggle"/>
+          <div className="menu">
+            <a>Dashboard</a>
+            <a>Quick Menu</a>
+            <a>Notifications</a>
+            <a>Staff</a>
+          </div>
         </div>   
         <div className='topright'>
           <div className="topbarIconsContainer"> 
