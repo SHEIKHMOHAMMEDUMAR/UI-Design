@@ -1,106 +1,69 @@
-import React from "react"
 import "./sidebar.css"
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import Divider from "@material-ui/core/Divider";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import ExpandLessIcon from "@material-ui/icons/ExpandLess";
-import Collapse from "@material-ui/core/Collapse";
-function SidebarItem({ depthStep = 10, depth = 0, expanded, item, ...rest }) {
-    const [collapsed, setCollapsed] = React.useState(true);
-    const { label, items, Icon, onClick: onClickProp } = item;
-  
-    function toggleCollapse() {
-      setCollapsed(prevValue => !prevValue);
-    }
-  
-    function onClick(e) {
-      if (Array.isArray(items)) {
-        toggleCollapse();
-      }
-      if (onClickProp) {
-        onClickProp(e, item);
-      }
-    }
-  
-    let expandIcon;
-  
-    if (Array.isArray(items) && items.length) {
-      expandIcon = !collapsed ? (
-        <ExpandLessIcon
-          className={
-            "sidebar-item-expand-arrow" 
-          }
-        />
-      ) : (
-        <ExpandMoreIcon className="sidebar-item-expand-arrow" />
-      );
-    }
-  
-    return (
-      <>
-        <ListItem
-          className="sidebar-item"
-          onClick={onClick}
-          button
-          dense
-          {...rest}
-        >
-          <div
-            style={{ paddingLeft: depth * depthStep }}
-            className="sidebar-item-content"
-          >
-            {Icon && <Icon className="sidebar-item-icon" fontSize="small" />}
-            <div className="sidebar-item-text">{label}</div>
-          </div>
-          {expandIcon}
-        </ListItem>
-        <Collapse in={!collapsed} timeout="auto" unmountOnExit>
-          {Array.isArray(items) ? (
-            <List disablePadding dense>
-              {items.map((subItem, index) => (
-                <React.Fragment key={`${subItem.name}${index}`}>
-                  {subItem === "divider" ? (
-                    <Divider style={{ margin: "6px 0" }} />
-                  ) : (
-                    <SidebarItem
-                      depth={depth + 1}
-                      depthStep={depthStep}
-                      item={subItem}
-                    />
-                  )}
-                </React.Fragment>
-              ))}
-            </List>
-          ) : null}
-        </Collapse>
-      </>
-    );
-  }
-  
-  function Sidebar({ items, depthStep, depth, expanded }) {
-    return (
-      <div className="sidebar">
-        <List disablePadding dense>
-          {items.map((sidebarItem, index) => (
-            <React.Fragment key={`${sidebarItem.name}${index}`}>
-              {sidebarItem === "divider" ? (
-                <Divider style={{ margin: "6px 0" }} />
-              ) : (
-                  <div className="item">
-                <SidebarItem
-                  depthStep={depthStep}
-                  depth={depth}
-                  expanded={expanded}
-                  item={sidebarItem}
-                />
-                </div>
-              )}
-            </React.Fragment>
-          ))}
-        </List>
-      </div>
-    );
-  }
-export default Sidebar;
-
+import { Work,Message,Feedback,MailOutline,Report,BusinessCenterOutlined,ReportProblem,EnhancedEncryptionTwoTone, LineStyle, Timeline, TrendingUp, VerifiedUserOutlined} from "@material-ui/icons"
+export default function Sidebar() {
+  return (
+    <div className="sidebar">
+        <div className="sidebarWrapper">
+            <div className="sidebarMenu">
+                <h3 className="sidebarTitle">Dashboard</h3>
+                <ul className="sidebarList">
+                    <li className="sidebarListItem active">
+                        <LineStyle className="sidebarIcon"/> Home
+                    </li>
+                    <li className="sidebarListItem">
+                        <Timeline className="sidebarIcon"/> Analytics
+                    </li>
+                    <li className="sidebarListItem"> 
+                        <TrendingUp className="sidebarIcon"/> Sales   
+                    </li>
+                </ul>
+            </div>
+            <div className="sidebarMenu">
+                <h3 className="sidebarTitle">Quick Menu</h3>
+                <ul className="sidebarList">
+                    <li className="sidebarListItem">
+                        <VerifiedUserOutlined className="sidebarIcon"/> Users
+                    </li>
+                    <li className="sidebarListItem">
+                        <BusinessCenterOutlined className="sidebarIcon"/> Products
+                    </li>
+                    <li className="sidebarListItem"> 
+                        <EnhancedEncryptionTwoTone className="sidebarIcon"/> Transactions   
+                    </li>
+                    <li className="sidebarListItem"> 
+                        <Report className="sidebarIcon"/> Reports   
+                    </li>
+                </ul>
+            </div>
+            <div className="sidebarMenu">
+                <h3 className="sidebarTitle">Notifications</h3>
+                <ul className="sidebarList">
+                    <li className="sidebarListItem">
+                        <MailOutline className="sidebarIcon"/> Mail
+                    </li>
+                    <li className="sidebarListItem">
+                        <Feedback className="sidebarIcon"/> Feedback
+                    </li>
+                    <li className="sidebarListItem"> 
+                        <Message className="sidebarIcon"/> Messages   
+                    </li>
+                </ul>
+            </div>
+            <div className="sidebarMenu">
+                <h3 className="sidebarTitle">Staff</h3>
+                <ul className="sidebarList">
+                    <li className="sidebarListItem">
+                        <Work className="sidebarIcon"/> Manage
+                    </li>
+                    <li className="sidebarListItem">
+                        <Timeline className="sidebarIcon"/> Analytics
+                    </li>
+                    <li className="sidebarListItem"> 
+                        <ReportProblem className="sidebarIcon"/> Reports   
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  )
+}
