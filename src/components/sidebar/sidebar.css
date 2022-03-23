@@ -1,46 +1,15 @@
-.sidebar{
-    flex: 1;
-    height: calc(110vh - 5.0em);
-    background-color: rgb(240, 234, 250);
-    position: sticky;
-    top: 5.0em;
+.sidebar {
+  flex: 1;
+  height: calc(110vh - 5em);
+  background-color: rgb(240, 234, 250);
+  position: sticky;
+  top: 5em;
 }
-.sidebarWrapper{
-    padding: .7em;
-    color: #555;
+.item {
+  font-size: large;
 }
-.sidebarTitle{
-    font-size: 1em;
-    color: rgb(94, 96, 102);
-}
-.sidebarList{
-    list-style: none;
-    padding: .3em;
-}
-.sidebarListItem{
-    padding: .2em;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    border-radius: 0.7em; 
-}
-.sidebarListItem.active,
-.sidebarListItem:hover{
-background-color: rgb(230, 209, 255);
-}
-.sidebarIcon{
-    margin-right: .5em;
-    font-size: 2.0em;
-}
-@media(max-width: 30em){
-    .sidebar{
-        display: none;
-        max-width: 0em;
-        max-height: 0em;
-    }
-    .sidebar .menuIcon:checked{
-        display: block;
-        max-width: 50%;
-        max-height: 50%;
-    }
+@media (max-width: 30em) {
+  .sidebar {
+    display: none;
+  }
 }

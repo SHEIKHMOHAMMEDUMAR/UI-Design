@@ -12,13 +12,13 @@ export default function topbar() {
         </div>
         <div className='topleftb'>
           <label for="toggle"><Menu/></label>
-          <span className='logo'>PSSLS</span>
+          <span className='logo'>Perfios</span>
           <input type="checkbox" id="toggle"/>
           <div className="menu">
-            <a>Dashboard</a>
-            <a>Quick Menu</a>
-            <a>Notifications</a>
-            <a>Staff</a>
+          <a href='/'>Dashboard</a>
+            <a href='/'>Quick Menu</a>
+            <a href='/'>Notifications</a>
+            <a href='/'>Staff</a>
           </div>
         </div>   
         <div className='topright'>
