@@ -1,0 +1,109 @@
+@mixin dis($dis:flex)
+    display: $dis
+@mixin align($align:center)
+    align-items: $align;
+@mixin pos($pos:relative)
+    position: $pos
+
+
+.topbar
+    @include pos($pos:sticky)
+    max-width: 100%;
+    max-height: 80px;
+    background-color: white;
+    top: 0;
+    z-index: 999;
+.topbarWrapper
+    @include dis
+    @include align
+    height: 100%;
+    padding: 0px 32px;
+    justify-content: space-between;
+.logo 
+  font-weight: bold;
+  font-size: 32px;
+  color: darkblue;
+.toplefta
+    @include dis
+.topleftb
+    @include dis($dis:none)
+.topright
+    @include dis
+    @include align
+    align-self: right;
+.topbarIconsContainer
+    @include pos
+    cursor: pointer;
+    margin-right: 16px;
+    color: #555;
+.topbarIconsBadges
+    @include dis
+    @include align
+    @include pos($pos:absolute)
+    width: 16px;
+    height: 16px;
+    top: -8px;
+    right: 0px;
+    border-radius: 50%;
+    justify-content: center;
+    background-color: red;
+    color: white;
+.topbaravatar 
+  max-width: 48px;
+  max-height: 48px;
+  cursor: pointer;
+  border-radius: 50%;
+.menu
+    @include dis($dis:none)
+
+@media (max-width: 480px) 
+  .topbar 
+    max-width: 100%;
+    max-height: 100%;
+  
+  .toplefta 
+    display: none;
+    margin: 0;
+    padding: 0;
+  
+  .topleftb 
+    display: block;
+  
+  .lan 
+    display: none;
+  
+  .set 
+    display: none;
+  
+  .menuIcon 
+    cursor: pointer;
+  
+  #toggle 
+    display: none;
+  
+  .nav 
+    display: block;
+    text-align: left;
+  
+  label 
+    cursor: pointer;
+  
+  .menu 
+    display: block;
+  
+  .menu 
+    text-align: left;
+    width: 100%;
+    display: none;
+    background-color: rgb(215, 218, 252);
+    padding: 16px;
+  
+  .menu a 
+    display: block;
+    margin: 16px;
+  
+  #toggle:checked + .menu 
+    display: block;
+    font-size: large;
+  
+
