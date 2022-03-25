@@ -12,7 +12,7 @@ export default function Home() {
       <div className="homeWidgets">
         <WidgetSmall />
         <Widgetlarge />
-          </div>
+      </div>
     </div>
   )
 }

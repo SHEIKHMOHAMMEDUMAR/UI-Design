@@ -5,43 +5,43 @@
 }
 .featuredItem{
     flex: 1;
-    margin: 0em .7em;
-    padding: 1rem;
-    border-radius: 1.0rem;
+    margin: 0px 7px;
+    padding: 10px;
+    border-radius: 10px;
     cursor: pointer;
-    -webkit-box-shadow: 0rem 0rem 1.5rem -1.0rem rgb(0,0,0,0.75);
-    box-shadow: 0rem 0rem 1.5rem -1.0rem rgb(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 15px -10px rgb(0,0,0,0.75);
+    box-shadow: 0px 0px 15px -10px rgb(0,0,0,0.75);
 }
 .featuredTitle{
-    font-size: 1.5rem;
+    font-size: 15px;
 }
 .featuredMoneyConatiner{
-    margin: .7rem 0rem;
+    margin: 7px 0px;
     display: flex;
     align-items: center;
 }
 .featuredMoney{
-    font-size: 2.0rem;
+    font-size: 20px;
     font-weight: bold;
 }
 .featuredMoneyRate{
     align-items: center;
     display: flex;
-    margin-left: 1.0rem;
+    margin-left: 10px;
 }
 .featuredIcon{
-    font-size: 1.4rem;
-    margin-left: .5rem;
+    font-size: 14px;
+    margin-left: 5px;
     color: green;
 }
 .featuredIcon.negative{
     color: red;
 }
 .featureSub{
-    font-size: 1rem;
+    font-size: 10px;
     color: gray;
 }
-@media(max-width: 30em) {
+@media(max-width: 480px) {
     .featured{
         display: block;
     }
