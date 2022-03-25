@@ -1,109 +1,50 @@
-@mixin dis($dis:flex)
-    display: $dis
-@mixin align($align:center)
-    align-items: $align;
-@mixin pos($pos:relative)
-    position: $pos
-
-
+@import './var-fun';
+@import './_mixin';
 .topbar
-    @include pos($pos:sticky)
-    max-width: 100%;
-    max-height: 80px;
-    background-color: white;
-    top: 0;
+    @include pos($pos:sticky);
+    @include alignn;
     z-index: 999;
+.topbarWrapper, .toplefta, .topright, topbarIconsBadges
+    display : dis(flex)
 .topbarWrapper
-    @include dis
-    @include align
-    height: 100%;
-    padding: 0px 32px;
-    justify-content: space-between;
+    @include style;
 .logo 
-  font-weight: bold;
-  font-size: 32px;
-  color: darkblue;
-.toplefta
-    @include dis
-.topleftb
-    @include dis($dis:none)
+    @include style_logo
+.topleftb, .menu
+    display : dis(none)
 .topright
-    @include dis
-    @include align
+    align-items : center
     align-self: right;
 .topbarIconsContainer
     @include pos
-    cursor: pointer;
+    cursor: $cur
     margin-right: 16px;
     color: #555;
 .topbarIconsBadges
-    @include dis
-    @include align
     @include pos($pos:absolute)
-    width: 16px;
-    height: 16px;
-    top: -8px;
-    right: 0px;
-    border-radius: 50%;
-    justify-content: center;
-    background-color: red;
-    color: white;
+    @include style_badge
 .topbaravatar 
-  max-width: 48px;
-  max-height: 48px;
-  cursor: pointer;
-  border-radius: 50%;
-.menu
-    @include dis($dis:none)
-
-@media (max-width: 480px) 
+    @include style_avatar
+@include mob 
   .topbar 
-    max-width: 100%;
-    max-height: 100%;
-  
+    @include tophtwt
   .toplefta 
-    display: none;
-    margin: 0;
-    padding: 0;
-  
-  .topleftb 
-    display: block;
-  
-  .lan 
-    display: none;
-  
-  .set 
-    display: none;
-  
+    @include pad_margin
+  .topleftb, .nav, #toggle:checked + .menu, .menu a
+    display : dis(block)
+  .lan, .set, #toggle, .toplefta
+    display : dis(none)
   .menuIcon 
-    cursor: pointer;
-  
-  #toggle 
-    display: none;
-  
+    cursor: $cur
   .nav 
-    display: block;
     text-align: left;
-  
   label 
-    cursor: pointer;
-  
+    cursor: $cur
   .menu 
-    display: block;
-  
-  .menu 
-    text-align: left;
-    width: 100%;
-    display: none;
-    background-color: rgb(215, 218, 252);
-    padding: 16px;
-  
-  .menu a 
-    display: block;
-    margin: 16px;
-  
+    @include style_menu
+    a 
+      margin: 16px;  
   #toggle:checked + .menu 
-    display: block;
     font-size: large;
   
 
