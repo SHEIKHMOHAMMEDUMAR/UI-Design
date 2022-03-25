@@ -8,10 +8,13 @@
   z-index: 999;
 }
 
-.topbarWrapper {
+.topbarWrapper, .toplefta, .topright, topbarIconsBadges {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.topbarWrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -28,24 +31,16 @@
   color: darkblue;
 }
 
-.toplefta {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.topleftb {
+.topleftb, .menu {
   display: none;
 }
 
 .topright {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-item-align: right;
+      -ms-grid-row-align: right;
       align-self: right;
 }
 
@@ -57,13 +52,10 @@
 }
 
 .topbarIconsBadges {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: absolute;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
   width: 16px;
   height: 16px;
   top: -8px;
@@ -83,44 +75,29 @@
   border-radius: 50%;
 }
 
-.menu {
-  display: none;
-}
-
-@media (max-width: 480px) {
+@media (max-width: 800px) {
   .topbar {
     max-width: 100%;
     max-height: 100%;
   }
   .toplefta {
-    display: none;
     margin: 0;
     padding: 0;
   }
-  .topleftb {
+  .topleftb, .nav, #toggle:checked + .menu, .menu a {
     display: block;
   }
-  .lan {
-    display: none;
-  }
-  .set {
+  .lan, .set, #toggle, .toplefta {
     display: none;
   }
   .menuIcon {
     cursor: pointer;
   }
-  #toggle {
-    display: none;
-  }
   .nav {
-    display: block;
     text-align: left;
   }
   label {
     cursor: pointer;
-  }
-  .menu {
-    display: block;
   }
   .menu {
     text-align: left;
@@ -130,11 +107,9 @@
     padding: 16px;
   }
   .menu a {
-    display: block;
     margin: 16px;
   }
   #toggle:checked + .menu {
-    display: block;
     font-size: large;
   }
 }
