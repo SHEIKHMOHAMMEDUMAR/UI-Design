@@ -10,7 +10,7 @@ let SidebarItem = ({ depthStep = 10, depth = 0, expanded, item, ...rest }) => {
     const [collapsed, setCollapsed] = React.useState(true);
     const { label, items, Icon, onClick: onClickProp } = item;
   
-    function toggleCollapse() {
+    let toggleCollapse = () => {
       setCollapsed(prevValue => !prevValue);
     }
   
