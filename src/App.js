@@ -3,7 +3,7 @@ import Sidebar from "./components/sidebar/Sidebar"
 import "./app.css"
 import Home from "./pages/home/Home";
 import { Work,Message,Feedback,MailOutline,BusinessCenterOutlined,ReportProblem,EnhancedEncryptionTwoTone, LineStyle, Timeline, TrendingUp, VerifiedUserOutlined} from "@material-ui/icons"
-function onClick(e, item) {
+let onClick = (e, item) => {
   window.alert(JSON.stringify(item, null, 2));
 }
 
@@ -40,7 +40,7 @@ const items = [
   ]
   } 
 ]
-function App() {
+let App = () => {
   return (
     <div>
       <Topbar/>

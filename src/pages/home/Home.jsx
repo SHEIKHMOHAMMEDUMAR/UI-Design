@@ -4,7 +4,7 @@ import "./home.css"
 import { userData } from "../../dummyData"
 import WidgetSmall from "../../components/widgetSmall/WidgetSmall"
 import Widgetlarge from "../../components/widgetLarge/WidgetLarge"
-export default function Home() {
+let Home = () => {
   return (
     <div className="home">
       <FeatureInfo />
@@ -16,3 +16,4 @@ export default function Home() {
     </div>
   )
 }
+export default Home;

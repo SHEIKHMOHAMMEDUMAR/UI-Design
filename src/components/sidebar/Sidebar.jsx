@@ -6,15 +6,13 @@ import Divider from "@material-ui/core/Divider";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import Collapse from "@material-ui/core/Collapse";
-function SidebarItem({ depthStep = 10, depth = 0, expanded, item, ...rest }) {
+let SidebarItem = ({ depthStep = 10, depth = 0, expanded, item, ...rest }) => {
     const [collapsed, setCollapsed] = React.useState(true);
     const { label, items, Icon, onClick: onClickProp } = item;
   
-    function toggleCollapse() {
-      setCollapsed(prevValue => !prevValue);
-    }
+    let toggleCollapse = () => setCollapsed(prevValue => !prevValue);
   
-    function onClick(e) {
+    let onClick = (e) => {
       if (Array.isArray(items)) {
         toggleCollapse();
       }
@@ -78,7 +76,7 @@ function SidebarItem({ depthStep = 10, depth = 0, expanded, item, ...rest }) {
     );
   }
   
-  function Sidebar({ items, depthStep, depth, expanded }) {
+let Sidebar = ({ items, depthStep, depth, expanded })=> {
     return (
       <div className="sidebar">
         <List disablePadding dense>

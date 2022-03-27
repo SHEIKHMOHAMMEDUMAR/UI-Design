@@ -1,7 +1,7 @@
 import { Visibility } from "@material-ui/icons";
 import "./widgetSmall.css"
 const { faker } = require('@faker-js/faker');
-export default function WidgetSmall() {
+let WidgetSmall = () => {
   return (
     <div className="widgetS">
         <span className="widgetSTitle">New Join Members</span>
@@ -60,3 +60,4 @@ export default function WidgetSmall() {
     </div>
   )
 }
+export default WidgetSmall;

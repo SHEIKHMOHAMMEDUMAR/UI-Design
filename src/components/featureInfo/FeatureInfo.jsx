@@ -1,7 +1,7 @@
 import { ArrowUpward, ArrowDownward } from "@material-ui/icons"
 import "./featureInfo.css"
 
-export default function FeatureInfo() {
+let FeatureInfo = () => {
   return (
     <div className="featured">
         <div className="featuredItem">
@@ -37,3 +37,4 @@ export default function FeatureInfo() {
     </div>
   )
 }
+export default FeatureInfo;

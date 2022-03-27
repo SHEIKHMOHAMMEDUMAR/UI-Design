@@ -1,6 +1,6 @@
 import "./widgetLarge.css"
 const { faker } = require('@faker-js/faker');
-export default function WidgetLarge() {
+let WidgetLarge = () => {
   const Button = ({type}) => {
     return <button className={"widgetLButton " + type}>{type}</button>
   }
@@ -62,3 +62,4 @@ export default function WidgetLarge() {
     </div>
   )
 }
+export default WidgetLarge;
