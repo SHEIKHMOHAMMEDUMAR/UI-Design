@@ -1,14 +1,14 @@
 .sidebar {
   flex: 1;
-  height: calc(110vh - 5em);
+  height: calc(110vh - 50px);
   background-color: rgb(240, 234, 250);
   position: sticky;
-  top: 5em;
+  top: 50px;
 }
 .item {
   font-size: large;
 }
-@media (max-width: 30em) {
+@media (max-width: 480px) {
   .sidebar {
     display: none;
   }

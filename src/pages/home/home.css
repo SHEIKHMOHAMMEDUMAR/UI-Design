@@ -3,14 +3,14 @@
 }
 .homeWidgets{
     display: flex;
-    margin: 2.0em;
+    margin: 20px;
 }
-@media(max-width: 40em){
+@media(max-width: 480px){
     .home{
         flex: 2;
     }
     .homeWidgets{
         display: block;
-        margin: 1.0em;
+        margin: 10px;
     }
 } 

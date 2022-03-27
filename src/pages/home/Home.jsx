@@ -12,7 +12,7 @@ let Home = () => {
       <div className="homeWidgets">
         <WidgetSmall />
         <Widgetlarge />
-          </div>
+      </div>
     </div>
   )
 }
