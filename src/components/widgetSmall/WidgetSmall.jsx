@@ -1,6 +1,6 @@
 import { Visibility } from "@material-ui/icons";
 import { useState } from "react";
-import "./widgetSmall.css"
+import "./widsmall.css"
 let WidgetSmall = ({items}) => {
     const [item] = useState(items);
   return (

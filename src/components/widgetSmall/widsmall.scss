@@ -1,0 +1,43 @@
+@import './mixin';
+.widgetSButton{
+    @include button;
+}
+.widgetSIcon{
+    margin-right: 5px;
+}
+.widgetSUsername{
+    font-weight: $font;
+}
+.widgetSUserTitle{
+    font-weight: 200;
+}
+.widgetSUser{
+    display: flex;
+    flex-direction: column;
+}
+.widgetS{
+    flex: 1;
+    padding: 10px;
+}
+.widgetSTitle{
+    font-size: 20px;
+    font-weight: 600;
+}
+.widgetSListItem{
+    @include item;
+}
+.widgetSList{
+    @include list;
+}
+.widgetSImg{
+    @include img;
+}
+@include mob {
+    .widgetS{
+        flex: 1;
+        max-width: 100%;
+    }
+    .widgetSImg{
+        @include mimg;
+    }
+}

@@ -1,0 +1,48 @@
+@import './mixin';
+.widgetLImg {
+    @include img;
+}
+.widgetLDate,.widgetLAmount{
+    font-weight: 300;
+}
+.widgetL{
+    @include l;
+}
+.widgetLTitle{
+    font-size: 20px;
+    font-weight: 600;
+}
+.widgetLTable{
+    max-width: 100%;
+    border-spacing: 10px;
+}
+.widgetLTh{
+    text-align: left;
+}
+.widgetLUser{
+    @include user;
+}
+.widgetLButton{
+    @include button;
+}
+.widgetLButton.Approved{
+    @include back-col;
+}
+.widgetLButton.Declined{
+    @include back-col($background : #fac1bd, $col : #ff0000)
+}
+.widgetLButton.Pending{
+    @include back-col($background : #ecbdfa, $col : #0000ff)
+}
+@include mob{
+    .widgetL{
+        flex: 1;
+        max-width: 100%;
+    }
+    .widgetLImg{
+        @include mimg;
+    }
+    .widgetLStatus, .widgetLTh.s{
+        display: none;
+    }
+}

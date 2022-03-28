@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "./widgetLarge.css"
+import "./widlar.css"
 let WidgetLarge = ({items}) => {
   const [item] = useState(items);
   const Button = ({type}) => {
