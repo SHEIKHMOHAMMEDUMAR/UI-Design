@@ -1,6 +1,7 @@
+import { useState } from "react"
 import "./widgetLarge.css"
-const { faker } = require('@faker-js/faker');
-let WidgetLarge = () => {
+let WidgetLarge = ({items}) => {
+  const [item] = useState(items);
   const Button = ({type}) => {
     return <button className={"widgetLButton " + type}>{type}</button>
   }
@@ -14,50 +15,19 @@ let WidgetLarge = () => {
           <th className="widgetLTh">Amount</th>
           <th className="widgetLTh s">Status</th>
         </tr>
-        <tr className="widgetLTr">
-          <td className="widgetLUser">
-            <img src={faker.image.avatar()} alt="" className="widgetLImg" />
-            <span className="widgetLName">Susan Carol</span>
-          </td>
-          <td className="widgetLDate">2 Jun 2021</td>
-          <td className="widgetLAmount">$122.00</td>
-          <td className="widgetLStatus">
-            <Button type="Approved" />
-          </td>
-        </tr>
-        <tr className="widgetLTr">
-          <td className="widgetLUser">
-            <img src={faker.image.avatar()} alt="" className="widgetLImg" />
-            <span className="widgetLName">Susan Carol</span>
-          </td>
-          <td className="widgetLDate">2 Jun 2021</td>
-          <td className="widgetLAmount">$122.00</td>
-          <td className="widgetLStatus">
-            <Button type="Declined" />
-          </td>
-        </tr>
-        <tr className="widgetLTr">
-          <td className="widgetLUser">
-            <img src={faker.image.avatar()} alt="" className="widgetLImg" />
-            <span className="widgetLName">Susan Carol</span>
-          </td>
-          <td className="widgetLDate">2 Jun 2021</td>
-          <td className="widgetLAmount">$122.00</td>
-          <td className="widgetLStatus">
-            <Button type="Pending" />
-          </td>
-        </tr>
-        <tr className="widgetLTr">
-          <td className="widgetLUser">
-            <img src={faker.image.avatar()} alt="" className="widgetLImg" />
-            <span className="widgetLName">Susan Carol</span>
-          </td>
-          <td className="widgetLDate">2 Jun 2021</td>
-          <td className="widgetLAmount">$122.00</td>
-          <td className="widgetLStatus">
-            <Button type="Approved" />
-          </td>
-        </tr>
+        {item.map((i)=>(
+          <tr className="widgetLTr">
+            <td className="widgetLUser">
+              <img src={i.img} alt="" className="widgetLImg" />
+              <span className="widgetLName">{i.name}</span>
+            </td>
+            <td className="widgetLDate">{i.date}</td>
+            <td className="widgetLAmount">{i.Amount}</td>
+            <td className="widgetLStatus">
+              <Button type={i.Button} />
+            </td>
+          </tr>
+        ))}
       </table>
     </div>
   )

@@ -4,14 +4,27 @@ import "./home.css"
 import { userData } from "../../dummyData"
 import WidgetSmall from "../../components/widgetSmall/WidgetSmall"
 import Widgetlarge from "../../components/widgetLarge/WidgetLarge"
+const { faker } = require('@faker-js/faker');
+const Litems = [
+    { img: faker.image.avatar(), name: "Susan Carol", date: "2 Jan 2021", Amount: "$122.00", Button: "Approved"},
+    { img: faker.image.avatar(), name: "Umar Carol", date: "2 Jan 2021", Amount: "$122.00", Button: "Approved"},
+    { img: faker.image.avatar(), name: "Susan Carol", date: "2 Jan 2021", Amount: "$122.00", Button: "Declined"},
+    { img: faker.image.avatar(), name: "Susan Carol", date: "2 Jan 2021", Amount: "$122.00", Button: "Declined"},
+]
+const Sitems = [
+  { img: faker.image.avatar(), name: "Susan Carol", title: "Software Engineer."},
+  { img: faker.image.avatar(), name: "Umar Carol", title: "Software Engineer."},
+  { img: faker.image.avatar(), name: "Susan Carol", title: "Software Engineer."},
+  { img: faker.image.avatar(), name: "Susan Carol", title: "Software Engineer."}
+]
 let Home = () => {
   return (
     <div className="home">
       <FeatureInfo />
       <Chart data={userData} title="User Analytics" grid dataKey="Active User" />
       <div className="homeWidgets">
-        <WidgetSmall />
-        <Widgetlarge />
+        <WidgetSmall items={Sitems}/>
+        <Widgetlarge items={Litems}/>
       </div>
     </div>
   )

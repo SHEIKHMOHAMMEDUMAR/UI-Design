@@ -103,4 +103,3 @@ let Sidebar = ({ items, depthStep, depth, expanded })=> {
     );
   }
 export default Sidebar;
-
