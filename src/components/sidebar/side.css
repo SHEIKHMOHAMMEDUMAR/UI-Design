@@ -1,0 +1,18 @@
+.sidebar {
+  max-width: 20px;
+  max-height: 20px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.item {
+  font-size: large;
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+}
+/*# sourceMappingURL=side.css.map */

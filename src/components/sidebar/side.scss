@@ -1,0 +1,12 @@
+@import './mixin';
+.sidebar{
+    @include side;
+}
+.item {
+    font-size: large;
+  }
+  @media (max-width: 480px) {
+    .sidebar {
+      display: none;
+    }
+  }
