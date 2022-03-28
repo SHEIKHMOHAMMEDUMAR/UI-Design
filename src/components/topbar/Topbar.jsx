@@ -1,9 +1,9 @@
 import React from 'react'
-import "./topbar.css"
+import "./topbarr.css"
 import { Notifications, Language, Settings } from '@material-ui/icons'
 import { Menu } from '@material-ui/icons';
 const { faker } = require('@faker-js/faker');
-export default function topbar() {
+let topbar = () => {
   return (
     <div className='topbar'>
       <div className='topbarWrapper'>
@@ -45,3 +45,4 @@ export default function topbar() {
     </div>
   )
 }
+export default topbar;

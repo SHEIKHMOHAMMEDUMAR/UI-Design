@@ -1,0 +1,40 @@
+$font : 600px;
+@mixin button{
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 10px;
+    background-color: #eeeef7;
+    color:gray;
+    cursor: pointer;
+}
+@mixin item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+@mixin list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+@mixin img {
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+@mixin mob{
+    @media (max-width : 800px){
+    @content
+    }
+}
+@mixin mimg{
+    max-width: 20px;
+        max-height: 20px;
+        border-radius: 50%;
+        object-fit: cover;
+}

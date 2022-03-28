@@ -1,0 +1,50 @@
+@import './var-fun';
+@import './_mixin';
+.topbar
+    @include pos($pos:sticky);
+    @include alignn;
+    z-index: 999;
+.topbarWrapper, .toplefta, .topright, topbarIconsBadges
+    display : dis(flex)
+.topbarWrapper
+    @include style;
+.logo 
+    @include style_logo
+.topleftb, .menu
+    display : dis(none)
+.topright
+    align-items : center
+    align-self: right;
+.topbarIconsContainer
+    @include pos
+    cursor: $cur
+    margin-right: 16px;
+    color: #555;
+.topbarIconsBadges
+    @include pos($pos:absolute)
+    @include style_badge
+.topbaravatar 
+    @include style_avatar
+@include mob 
+  .topbar 
+    @include tophtwt
+  .toplefta 
+    @include pad_margin
+  .topleftb, .nav, #toggle:checked + .menu, .menu a
+    display : dis(block)
+  .lan, .set, #toggle, .toplefta
+    display : dis(none)
+  .menuIcon 
+    cursor: $cur
+  .nav 
+    text-align: left;
+  label 
+    cursor: $cur
+  .menu 
+    @include style_menu
+    a 
+      margin: 16px;  
+  #toggle:checked + .menu 
+    font-size: large;
+  
+

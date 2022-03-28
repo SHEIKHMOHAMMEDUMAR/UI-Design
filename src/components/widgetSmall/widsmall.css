@@ -1,0 +1,93 @@
+.widgetSButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 10px;
+  background-color: #eeeef7;
+  color: gray;
+  cursor: pointer;
+}
+
+.widgetSIcon {
+  margin-right: 5px;
+}
+
+.widgetSUsername {
+  font-weight: 600px;
+}
+
+.widgetSUserTitle {
+  font-weight: 200;
+}
+
+.widgetSUser {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.widgetS {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 10px;
+}
+
+.widgetSTitle {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.widgetSListItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.widgetSList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.widgetSImg {
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  .widgetS {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    max-width: 100%;
+  }
+  .widgetSImg {
+    max-width: 20px;
+    max-height: 20px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+/*# sourceMappingURL=widsmall.css.map */

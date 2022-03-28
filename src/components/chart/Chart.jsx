@@ -6,7 +6,7 @@ import {
     CartesianGrid,
     Tooltip,
     ResponsiveContainer} from 'recharts';
-export default function Chart({title, data, dataKey, grid}) {
+let Chart = ({title, data, dataKey, grid}) => {
   return (
     <div className="chart">
         <h2 className="chartTitle">{title}</h2>
@@ -21,3 +21,4 @@ export default function Chart({title, data, dataKey, grid}) {
     </div>
   )
 }
+export default Chart;

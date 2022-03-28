@@ -1,39 +1,23 @@
-import { ArrowUpward, ArrowDownward } from "@material-ui/icons"
+import { ArrowUpward} from "@material-ui/icons"
 import "./featureInfo.css"
-
-export default function FeatureInfo() {
-  return (
+import { useState } from "react";
+let FeatureInfo = ({items}) => {
+  const [item] = useState(items);
+    return (
     <div className="featured">
-        <div className="featuredItem">
-            <span className="featuredTitle">Revenue</span>
+        {item.map((i)=>(
+            <div className="featuredItem">
+            <span className="featuredTitle">{i.title}</span>
             <div className="featuredMoneyConatiner">
-                <span className="featuredMoney">$2,415</span>
+                <span className="featuredMoney">{i.cost}</span>
                 <span className="featuredMoneyRate">
-                    -11.4 <ArrowDownward className="featuredIcon negative"/>
+                    {i.rate} <ArrowUpward className="featuredIcon"/>
                 </span>
             </div>
-            <span className="featureSub">Comapred to last month</span>
+            <span className="featureSub">Compared to last month</span>
         </div>
-        <div className="featuredItem">
-            <span className="featuredTitle">Sales</span>
-            <div className="featuredMoneyConatiner">
-                <span className="featuredMoney">$4,415</span>
-                <span className="featuredMoneyRate">
-                    -1.4 <ArrowDownward className="featuredIcon negative"/>
-                </span>
-            </div>
-            <span className="featureSub">Comapred to last month</span>
-        </div>
-        <div className="featuredItem">
-            <span className="featuredTitle">Cost</span>
-            <div className="featuredMoneyConatiner">
-                <span className="featuredMoney">$2,225</span>
-                <span className="featuredMoneyRate">
-                    +2.45 <ArrowUpward className="featuredIcon" />
-                </span>
-            </div>
-            <span className="featureSub">Comapred to last month</span>
-        </div>
+        ))}
     </div>
-  )
+    )
 }
+export default FeatureInfo;

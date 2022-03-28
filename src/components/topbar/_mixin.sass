@@ -1,0 +1,46 @@
+@mixin pos($pos:relative)
+    position: $pos
+@mixin alignn
+  max-width: 100%;
+  max-height: 80px;
+  background-color: white;
+  top: 0;
+@mixin style
+    align-items : center
+    height: 100%;
+    padding: 0px 32px;
+    justify-content: space-between;
+@mixin style_badge
+    align-items : center
+    width: 16px;
+    height: 16px;
+    top: -8px;
+    right: 0px;
+    border-radius: 50%;
+    justify-content: center;
+    background-color: red;
+    color: white;
+@mixin style_avatar
+    max-width: 48px;
+    max-height: 48px;
+    cursor: $cur
+    border-radius: 50%;
+@mixin style_menu
+    text-align: left;
+    width: 100%;
+    display : dis(none)
+    background-color: rgb(215, 218, 252);
+    padding: 16px;
+@mixin style_logo
+    font-weight: bold;
+    font-size: 32px;
+    color: darkblue;
+@mixin tophtwt
+    max-width: 100%;
+    max-height: 100%;
+@mixin pad_margin
+    margin: 0;
+    padding: 0;
+@mixin mob
+    @media (max-width : $mobile)
+        @content
