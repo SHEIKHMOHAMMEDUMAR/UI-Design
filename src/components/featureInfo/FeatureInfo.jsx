@@ -12,7 +12,7 @@ let FeatureInfo = () => {
                     -11.4 <ArrowDownward className="featuredIcon negative"/>
                 </span>
             </div>
-            <span className="featureSub">Comapred to last month</span>
+            <span className="featureSub">Compared to last month</span>
         </div>
         <div className="featuredItem">
             <span className="featuredTitle">Sales</span>
@@ -22,7 +22,7 @@ let FeatureInfo = () => {
                     -1.4 <ArrowDownward className="featuredIcon negative"/>
                 </span>
             </div>
-            <span className="featureSub">Comapred to last month</span>
+            <span className="featureSub">Compared to last month</span>
         </div>
         <div className="featuredItem">
             <span className="featuredTitle">Cost</span>
@@ -32,7 +32,7 @@ let FeatureInfo = () => {
                     +2.45 <ArrowUpward className="featuredIcon" />
                 </span>
             </div>
-            <span className="featureSub">Comapred to last month</span>
+            <span className="featureSub">Compared to last month</span>
         </div>
     </div>
   )
