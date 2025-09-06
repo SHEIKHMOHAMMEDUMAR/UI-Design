@@ -49,17 +49,17 @@
 }
 
 .widgetLButton.Approved {
-  background-color: #c9fabd;
+  background-color: #dafad2;
   color: #00ff00;
 }
 
 .widgetLButton.Declined {
-  background-color: #fac1bd;
+  background-color: #fcdcd9;
   color: #ff0000;
 }
 
 .widgetLButton.Pending {
-  background-color: #ecbdfa;
+  background-color: #f5dafd;
   color: #0000ff;
 }
 
